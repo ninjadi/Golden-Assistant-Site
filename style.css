@@ -1,0 +1,261 @@
+/*
+ * Golden Assistant website styles
+ *
+ * The palette uses soft gold and neutral tones to convey a premium but
+ * welcoming look. Responsive design ensures the page looks good on
+ * desktops and mobile devices.
+ */
+
+:root {
+  /*
+   * Colour palette customised for the dark wine red theme.
+   * Primary colours are deep burgundy tones (#621B21). A slightly lighter
+   * version is used for hover states. Backgrounds use off‑white and neutral
+   * greys to achieve a high‑contrast, elegant look.
+   */
+  --primary-color: #621b21;
+  --primary-hover: #872d36;
+  --bg-light: #f7f7f7;
+  --text-dark: #212121;
+  --text-muted: #6f6f6f;
+  /* Gradient colours for the hero section: subtle burgundy gradient */
+  --gradient-start: #65000b;
+  --gradient-end: #621b21;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+header.hero {
+  background: linear-gradient(
+    to bottom right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-content h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content .tagline {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content .subtitle {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-hover);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.about p {
+  max-width: 840px;
+  margin: 0 auto 1rem auto;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+/* Plans */
+.plans .plan-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.plan-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 32px 24px;
+  width: 300px;
+  text-align: center;
+  border-top: 4px solid var(--primary-color);
+  /* Use flexbox to align the button at the bottom of each card */
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.plan-card .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.plan-card .period {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.plan-card ul {
+  list-style: none;
+  text-align: left;
+  /* Allow the list to consume available space and push the button down */
+  margin: 0 0 auto 0;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.plan-card ul li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.plan-card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+/* Contact */
+.contact p {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Style links in contact section */
+.contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.qr-placeholder {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem auto;
+  background-color: #ddd;
+  border-radius: 8px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--primary-hover);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .plans .plan-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-content .tagline {
+    font-size: 1.4rem;
+  }
+}
